@@ -14,4 +14,5 @@ Chance::~Chance()
 
 Chance::Chance(const Chance& CC)
 {
+	21312
 }
