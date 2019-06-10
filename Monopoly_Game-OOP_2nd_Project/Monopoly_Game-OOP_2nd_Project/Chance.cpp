@@ -5,7 +5,7 @@ using namespace std;
 
 Chance::Chance()
 {
-	fuck yyou in the pussy right now;//
+	fuck yyou in the pussy right now;///
 }
 
 Chance::~Chance()
