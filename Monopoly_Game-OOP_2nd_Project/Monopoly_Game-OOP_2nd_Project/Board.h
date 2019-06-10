@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <iomanip>
+
 #include "Slot.h"
 
 using namespace std;

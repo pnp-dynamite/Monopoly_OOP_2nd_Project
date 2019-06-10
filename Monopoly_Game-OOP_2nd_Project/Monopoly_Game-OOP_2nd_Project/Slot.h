@@ -2,6 +2,7 @@
 using namespace std;
 
 #include <string>
+#include "Player.h"
 
 #ifdef _DEBUG
 #ifndef DBG_NEW
@@ -18,16 +19,19 @@ private:
 
 protected:
 
-
-
-public:
 	// Constructor
 	Slot();
 	//	Destructor 
-	~Slot();
+	~Slot();	
 	//Copy Constructor
 	Slot(const Slot& SS);
 
+	virtual bool play(Player* p) = 0;
+	virtual string get_name() const = 0;
 
+public:
+	string get_name();
 
 };
+
+

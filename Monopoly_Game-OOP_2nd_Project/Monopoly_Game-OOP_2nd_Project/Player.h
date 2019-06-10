@@ -16,7 +16,6 @@ class Player
 private:
 
 
-
 public:
 	// Constructor
 	Player();
@@ -24,5 +23,10 @@ public:
 	~Player();
 	//Copy Constructor
 	Player(const Player& PP);
+
+	int draw_dice();
+	int get_counter();
+	string get_name();
+	friend ostream& operator<<(ostream& os, const Player& P);
 
 };

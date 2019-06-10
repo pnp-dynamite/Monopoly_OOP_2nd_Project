@@ -14,3 +14,8 @@ Slot::~Slot()
 Slot::Slot(const Slot& SS)
 {
 }
+
+string Slot::get_name()
+{
+
+}

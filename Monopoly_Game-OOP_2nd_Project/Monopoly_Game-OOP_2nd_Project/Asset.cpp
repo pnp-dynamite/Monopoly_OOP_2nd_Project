@@ -14,3 +14,7 @@ Asset::~Asset()
 Asset::Asset(const Asset& AA)
 {
 }
+
+string Asset::get_name()
+{
+}
