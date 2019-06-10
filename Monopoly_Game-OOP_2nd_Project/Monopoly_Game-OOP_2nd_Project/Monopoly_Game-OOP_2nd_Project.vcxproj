@@ -146,7 +146,13 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Asset.h" />
     <ClInclude Include="Board.h" />
+    <ClInclude Include="Chance.h" />
+    <ClInclude Include="Go.h" />
+    <ClInclude Include="Jail.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Slot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
