@@ -3,8 +3,9 @@
 #include "Go.h"
 using namespace std;
 
-Go::Go()
+Go::Go(int size, string order) : Slot(size), m_order(order)
 {
+	m_name = "Go";
 }
 
 Go::~Go()

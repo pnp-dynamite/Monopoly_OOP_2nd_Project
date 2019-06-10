@@ -3,6 +3,12 @@ using namespace std;
 
 #include <string>
 #include "Player.h"
+#include "Jail.h"
+#include "Go.h"
+#include "Chance.h"
+#include "Asset.h"
+#include "Player.h"
+#include "Board.h"
 
 #ifdef _DEBUG
 #ifndef DBG_NEW
@@ -18,9 +24,12 @@ private:
 
 
 protected:
+	int m_size;
+	string m_name;
 
 	// Constructor
-	Slot();
+	Slot(int slot_num, string& name);
+
 	//	Destructor 
 	~Slot();	
 	//Copy Constructor
@@ -30,7 +39,9 @@ protected:
 	virtual string get_name() const = 0;
 
 public:
+	static int slot_counter;
 	string get_name();
+	int random_number(int low, int high);
 
 };
 

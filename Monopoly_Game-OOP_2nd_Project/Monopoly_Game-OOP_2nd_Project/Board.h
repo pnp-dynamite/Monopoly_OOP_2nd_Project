@@ -10,8 +10,6 @@
 #include "Slot.h"
 
 using namespace std;
-class Slot;
-class Player;
 
 class Board {
 public:

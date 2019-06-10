@@ -15,18 +15,17 @@ using namespace std;
 class Chance : public Slot
 {
 private:
-
-
+	const string m_order; 
 
 public:
 	// Constructor
-	Chance();
+	Chance(int size, string order, int amount);
 	//	Destructor 
 	~Chance();
 	//Copy Constructor
 	Chance(const Chance& CC);
-
-
+	string get_name() const;
+	bool play(Player* p);
 
 };
 

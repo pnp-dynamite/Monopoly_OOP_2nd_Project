@@ -3,9 +3,9 @@
 #include "Chance.h"
 using namespace std;
 
-Chance::Chance()
+Chance::Chance(int size, string order, int amount): Slot(size), m_order(order)
 {
-	
+	m_name = "Chance";
 }
 
 Chance::~Chance()

@@ -15,18 +15,17 @@ using namespace std;
 class Jail : public Slot
 {
 private:
-
-
-
-
+	const string m_order;
 
 public:
 	// Constructor
-	Jail();
+	Jail(int size, string order);
 	//	Destructor 
 	~Jail();
 	//Copy Constructor
 	Jail(const Jail& JJ);
+	string get_name() const;
+	bool play(Player* p);
 
 
 

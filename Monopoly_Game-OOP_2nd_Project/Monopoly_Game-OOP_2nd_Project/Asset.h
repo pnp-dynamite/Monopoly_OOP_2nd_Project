@@ -14,20 +14,21 @@ using namespace std;
 class Asset	: public Slot
 {
 private:
-
-
-
-
+	string m_city;
+	string m_asset_name;
+	int m_rent;
+	int m_cost;
+	int m_owner;
 
 public:
 	// Constructor
-	Asset();
+	Asset(int size, string city, string asset_name);
 	//	Destructor 
 	~Asset();
 	//Copy Constructor
 	Asset(const Asset& AA);
-
-
+	string get_name() const;
+	bool play(Player* p);
 
 };
 

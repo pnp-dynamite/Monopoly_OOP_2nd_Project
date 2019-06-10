@@ -3,8 +3,15 @@
 #include "Player.h"
 using namespace std;
 
-Player::Player()
+Player::Player(string name, Board* BB, int balance)
 {
+	m_name = name;
+	m_board = BB; // μαγεχ φιξεγ
+	m_balance = balance;
+	m_in_jail = false;
+	m_slot_num = 1;
+
+
 }
 
 Player::~Player()

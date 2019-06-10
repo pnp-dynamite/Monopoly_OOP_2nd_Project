@@ -14,11 +14,18 @@ using namespace std;
 class Player
 {
 private:
-
+	int m_num;
+	string m_name;
+	string m_balance;
+	bool m_in_jail;
+	int m_slot_inx;
+	Board* m_board;
+	int *asset_arr;
+	int m_asset_arr_size;
 
 public:
 	// Constructor
-	Player();
+	Player(string name, Board* BB, int balance);
 	//	Destructor 
 	~Player();
 	//Copy Constructor

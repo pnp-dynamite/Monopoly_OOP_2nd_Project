@@ -15,20 +15,20 @@ using namespace std;
 class Go : public Slot
 {
 private:
-
+	const string m_order;
 
 
 
 
 public:
 	// Constructor
-	Go();
+	Go(int size, string order);
 	//	Destructor 
 	~Go();
 	//Copy Constructor
 	Go(const Go& GG);
-
-
+	string get_name() const;
+	bool play(Player* p);
 
 };
 
