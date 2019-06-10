@@ -1,5 +1,6 @@
 #pragma once
 #include "Slot.h"
+#include <string>
 
 using namespace std;
 
@@ -25,7 +26,7 @@ public:
 	//	Destructor 
 	~Go();
 	//Copy Constructor
-	Go(const Go&);
+	Go(const Go& GG);
 
 
 

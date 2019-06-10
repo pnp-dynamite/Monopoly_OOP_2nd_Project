@@ -1,5 +1,6 @@
 #pragma once
 #include "Slot.h"
+#include <string>
 
 using namespace std;
 
@@ -22,6 +23,6 @@ public:
 	//	Destructor 
 	~Player();
 	//Copy Constructor
-	Player(const Player&);
+	Player(const Player& PP);
 
 };

@@ -1,9 +1,6 @@
+#pragma once
 #include "Board.h"
-#include "Slot.h"
-#include <time.h>
-#include <stdlib.h>
-#include <iostream>
-#include <iomanip>
+
 using namespace std;
 
 string center(int width, const string& str) {

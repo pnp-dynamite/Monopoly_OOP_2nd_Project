@@ -2,6 +2,12 @@
 #define BOARD_H
 
 #include <string>
+#include <time.h>
+#include <stdlib.h>
+#include <iostream>
+#include <iomanip>
+#include "Slot.h"
+
 using namespace std;
 class Slot;
 class Player;

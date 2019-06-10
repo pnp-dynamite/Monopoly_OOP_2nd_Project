@@ -25,7 +25,7 @@ public:
 	//	Destructor 
 	~Asset();
 	//Copy Constructor
-	Asset(const Asset&);
+	Asset(const Asset& AA);
 
 
 

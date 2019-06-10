@@ -1,5 +1,6 @@
 #pragma once
 #include "Slot.h"
+#include <string>
 
 using namespace std;
 
@@ -25,7 +26,7 @@ public:
 	//	Destructor 
 	~Jail();
 	//Copy Constructor
-	Jail(const Jail&);
+	Jail(const Jail& JJ);
 
 
 

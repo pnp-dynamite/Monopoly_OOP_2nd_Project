@@ -1,6 +1,8 @@
 #pragma once
 using namespace std;
 
+#include <string>
+
 #ifdef _DEBUG
 #ifndef DBG_NEW
 #define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
@@ -24,7 +26,7 @@ public:
 	//	Destructor 
 	~Slot();
 	//Copy Constructor
-	Slot(const Slot&);
+	Slot(const Slot& SS);
 
 
 
