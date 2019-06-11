@@ -2,7 +2,7 @@
 using namespace std;
 
 #include <string>
-#include "Player.h"
+
 #include "Jail.h"
 #include "Go.h"
 #include "Chance.h"
@@ -20,15 +20,13 @@ using namespace std;
 
 class Slot
 {
-private:
-
 
 protected:
 	int m_size;
-	string m_name;
-
+	
+public:
 	// Constructor
-	Slot(int slot_num, string& name);
+	Slot(int slot_num);
 
 	//	Destructor 
 	~Slot();	
@@ -38,7 +36,7 @@ protected:
 	virtual bool play(Player* p) = 0;
 	virtual string get_name() const = 0;
 
-public:
+
 	static int slot_counter;
 	string get_name();
 	int random_number(int low, int high);

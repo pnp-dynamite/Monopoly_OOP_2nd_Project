@@ -14,8 +14,10 @@ using namespace std;
 
 class Chance : public Slot
 {
-private:
-	const string m_order; 
+protected:
+	string m_name;
+	 string m_order; 
+	 int m_amount;
 
 public:
 	// Constructor
@@ -24,6 +26,8 @@ public:
 	~Chance();
 	//Copy Constructor
 	Chance(const Chance& CC);
+
+
 	string get_name() const;
 	bool play(Player* p);
 

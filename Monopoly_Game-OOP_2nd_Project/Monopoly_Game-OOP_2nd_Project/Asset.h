@@ -13,7 +13,7 @@ using namespace std;
 
 class Asset	: public Slot
 {
-private:
+protected:
 	string m_city;
 	string m_asset_name;
 	int m_rent;
@@ -22,18 +22,22 @@ private:
 
 public:
 	// Constructor
-	Asset(int size, string city, string asset_name);
+	Asset(int size = 0, string city = "", string asset_name= "");
 	//	Destructor 
 	~Asset();
 	//Copy Constructor
 	Asset(const Asset& AA);
 
-	string get_name();
-	string get_city();
-	string get_asset_name();
-	int get_owner();
+	string get_name() const;
+	string get_city() const;
+	string get_asset_name() const;
+	int get_owner() const;
+	int get_cost() const;
+	int get_rent() const;
+
 
 	bool play(Player* p);
+	friend ostream& operator<<(ostream& os, const Asset& P);
 
 };
 

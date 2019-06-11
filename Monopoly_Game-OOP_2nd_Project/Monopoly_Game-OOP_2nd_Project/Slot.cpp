@@ -6,9 +6,9 @@ using namespace std;
 //int Slot::slot_counter = 1;
 
 
-Slot::Slot(int slot_num, string& name) : m_size(slot_num)
+Slot::Slot(int slot_num) : m_size(slot_num)
 {
-	m_name = name;
+
 }
 
 Slot::~Slot()
@@ -17,6 +17,7 @@ Slot::~Slot()
 
 Slot::Slot(const Slot& SS)
 {
+	m_size = SS.m_size;
 }
 
 string Slot::get_name()

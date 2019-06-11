@@ -1,3 +1,4 @@
+#pragma once
 #ifndef BOARD_H
 #define BOARD_H
 
@@ -8,6 +9,7 @@
 #include <iomanip>
 
 #include "Slot.h"
+#include "Player.h"
 
 using namespace std;
 
@@ -15,7 +17,7 @@ class Board {
 public:
 	enum action { END_GAME, PLAY, PRINT_BOARD };
 
-private:
+protected:
 	int m_size;
 	Slot **m_arr;
 	string m_board_image[6][5];
@@ -36,6 +38,7 @@ public:
 	void add_jail_slot(const string& text);
 	void add_chance_slot(const string& text, float amount);
 	friend ostream& operator<<(ostream& os, const Board& b);
+	Slot* get_slot(int inx) const;
 };
 
 

@@ -3,6 +3,8 @@
 #include <string>
 
 using namespace std;
+#define GoMoney 350
+
 
 #ifdef _DEBUG
 #ifndef DBG_NEW
@@ -14,8 +16,9 @@ using namespace std;
 
 class Jail : public Slot
 {
-private:
-	const string m_order;
+protected:
+	string m_name;
+	string m_order;
 
 public:
 	// Constructor

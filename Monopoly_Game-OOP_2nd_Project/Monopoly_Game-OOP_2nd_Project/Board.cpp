@@ -225,3 +225,8 @@ void Board::play(Player* players)
 	}
 	cout << "End of Game! Bye!" << endl;
 }
+
+Slot* Board::get_slot(int inx) const
+{
+	return m_arr[inx];
+}

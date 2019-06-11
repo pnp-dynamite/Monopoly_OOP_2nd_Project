@@ -14,8 +14,9 @@ using namespace std;
 
 class Go : public Slot
 {
-private:
-	const string m_order;
+protected:
+	string m_name;
+	string m_order;
 
 
 
