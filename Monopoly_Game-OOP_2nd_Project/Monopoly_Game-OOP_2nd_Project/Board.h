@@ -1,7 +1,16 @@
-#pragma once
-
+//#pragma once
 //#ifndef BOARD_H
 //#define BOARD_H
+
+//#include "Player.h"
+#include "Asset.h"
+#include "Chance.h"
+#include "Go.h"
+#include "Jail.h"
+
+class Slot;
+class Player;
+
 
 #include <string>
 #include <time.h>
@@ -9,10 +18,9 @@
 #include <iostream>
 #include <iomanip>
 
-#include "Slot.h"
-#include "Player.h"
 
 using namespace std;
+
 
 class Board {
 public:
@@ -43,5 +51,3 @@ public:
 };
 
 
-
-#endif

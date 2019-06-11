@@ -1,9 +1,13 @@
-#pragma once
+//#pragma once
+
+
 #include "Board.h"
+#include "Asset.h"
+#include "Slot.h"
 #include <string>
 
+
 using namespace std;
-#define GoMoney 350
 
 #ifdef _DEBUG
 #ifndef DBG_NEW
@@ -12,6 +16,9 @@ using namespace std;
 #endif
 #endif // _DEBUG
 
+class Board;
+class Asset;
+class Slot;
 class Player
 {
 protected:
@@ -27,7 +34,7 @@ protected:
 
 public:
 	// Constructor
-	Player(const string name, Board BB, int balance);
+	Player(const string name, Board* BB, int balance);
 	//	Destructor 
 	~Player();
 	//Copy Constructor

@@ -1,6 +1,8 @@
-#pragma once
+//#pragma once
 
 #include "Asset.h"
+//#include "Player.h"
+
 using namespace std;
 
 Asset::Asset(int size, string city, string asset_name): Slot(size)

@@ -1,6 +1,7 @@
-#pragma once
+//#pragma once
 
 #include "Slot.h"
+
 using namespace std;
 
 //int Slot::slot_counter = 1;

@@ -1,5 +1,8 @@
-#pragma once
+//#pragma once
+
 #include "Board.h"
+#include "Player.h"
+
 
 using namespace std;
 

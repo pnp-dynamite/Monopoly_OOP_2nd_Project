@@ -1,5 +1,6 @@
-#pragma once
+//#pragma once
 using namespace std;
+class Player;
 
 #include <string>
 #include <time.h>
@@ -7,10 +8,6 @@ using namespace std;
 #include <iostream>
 #include <iomanip>
 
-#include "Jail.h"
-#include "Go.h"
-#include "Chance.h"
-#include "Asset.h"
 
 #ifdef _DEBUG
 #ifndef DBG_NEW
@@ -18,7 +15,6 @@ using namespace std;
 #define new DBG_NEW
 #endif
 #endif // _DEBUG
-
 
 class Slot
 {
@@ -31,16 +27,15 @@ public:
 	Slot(int slot_num);
 
 	//	Destructor 
-	~Slot();	
+	virtual ~Slot();
 	//Copy Constructor
 	Slot(const Slot& SS);
-
+	 
 	virtual bool play(Player* p) = 0;
 	virtual string get_name() const = 0;
 
 
 	static int slot_counter;
-	string get_name();
 	int random_number(int low, int high);
 
 };

@@ -1,6 +1,10 @@
-#pragma once
+//#pragma once
+
+
 #include "Slot.h"
+#include "Player.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -11,7 +15,8 @@ using namespace std;
 #endif
 #endif // _DEBUG
 
-
+class Player;
+class Slot;
 class Chance : public Slot
 {
 protected:
@@ -25,7 +30,7 @@ public:
 	//	Destructor 
 	~Chance();
 	//Copy Constructor
-	Chance(const Chance& CC);
+	//Chance(const Chance& CC);
 
 
 	string get_name() const;

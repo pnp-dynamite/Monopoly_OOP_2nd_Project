@@ -1,6 +1,11 @@
-#pragma once
-#include "Slot.h"
+//#pragma once
 #include <string>
+#include <iostream>
+#include "Slot.h"
+#include "Player.h"
+
+
+
 
 using namespace std;
 
@@ -10,8 +15,8 @@ using namespace std;
 #define new DBG_NEW
 #endif
 #endif // _DEBUG
-
-
+class Player;
+class Slot;
 class Go : public Slot
 {
 protected:

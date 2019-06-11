@@ -1,5 +1,11 @@
-#pragma once
+//#pragma once
+
+
+#include <string>
+#include <iostream>
 #include "Slot.h"
+#include "Player.h"
+
 
 using namespace std;
 
@@ -10,7 +16,8 @@ using namespace std;
 #endif
 #endif // _DEBUG
 
-
+class Player;
+class Slot;
 class Asset	: public Slot
 {
 protected:

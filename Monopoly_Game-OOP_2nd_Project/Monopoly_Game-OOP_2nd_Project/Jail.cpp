@@ -1,6 +1,8 @@
-#pragma once
+//#pragma once
 
 #include "Jail.h"
+
+
 using namespace std;
 
 Jail::Jail(int size, string order) : Slot(size)
@@ -25,7 +27,7 @@ string Jail::get_name() const
 bool Jail::play(Player* p)
 {
 	cout << m_order << endl;
-	p->set_in_jail;
+	p->set_in_jail();
 
 	return true;
 }

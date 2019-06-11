@@ -1,6 +1,8 @@
-#pragma once
+//#pragma once
 
 #include "Go.h"
+
+
 using namespace std;
 
 Go::Go(int size, string order) : Slot(size)
