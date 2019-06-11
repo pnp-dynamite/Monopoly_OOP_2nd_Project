@@ -14,10 +14,10 @@ Chance::~Chance()
 {
 }
 
-Chance::Chance(const Chance& CC)
-{
-	
-}
+//Chance::Chance(const Chance& CC)
+//{
+//	
+//}
 
 string Chance::get_name() const
 {

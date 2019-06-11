@@ -2,13 +2,15 @@
 using namespace std;
 
 #include <string>
+#include <time.h>
+#include <stdlib.h>
+#include <iostream>
+#include <iomanip>
 
 #include "Jail.h"
 #include "Go.h"
 #include "Chance.h"
 #include "Asset.h"
-#include "Player.h"
-#include "Board.h"
 
 #ifdef _DEBUG
 #ifndef DBG_NEW

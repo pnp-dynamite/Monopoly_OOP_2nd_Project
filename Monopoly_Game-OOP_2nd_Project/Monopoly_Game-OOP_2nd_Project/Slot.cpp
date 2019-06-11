@@ -20,11 +20,6 @@ Slot::Slot(const Slot& SS)
 	m_size = SS.m_size;
 }
 
-string Slot::get_name()
-{
-
-}
-
 // Generate random number between the LOW number and the HIGH number (including)
 int Slot::random_number(int low, int high)
 {

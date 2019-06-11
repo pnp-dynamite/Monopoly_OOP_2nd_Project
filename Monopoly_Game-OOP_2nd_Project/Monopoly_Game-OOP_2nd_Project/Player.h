@@ -1,5 +1,5 @@
 #pragma once
-#include "Slot.h"
+#include "Board.h"
 #include <string>
 
 using namespace std;
