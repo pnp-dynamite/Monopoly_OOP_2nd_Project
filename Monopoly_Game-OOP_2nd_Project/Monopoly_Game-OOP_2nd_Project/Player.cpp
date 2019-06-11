@@ -10,8 +10,8 @@ Player::Player(string name, Board* BB, int balance)
 	m_balance = balance;
 	m_in_jail = false;
 	m_slot_num = 1;
-
-
+	asset_arr = nullptr;
+	m_asset_arr_size = 0;
 }
 
 Player::~Player()

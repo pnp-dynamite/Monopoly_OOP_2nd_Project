@@ -27,7 +27,12 @@ public:
 	~Asset();
 	//Copy Constructor
 	Asset(const Asset& AA);
-	string get_name() const;
+
+	string get_name();
+	string get_city();
+	string get_asset_name();
+	int get_owner();
+
 	bool play(Player* p);
 
 };

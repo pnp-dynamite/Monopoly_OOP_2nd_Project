@@ -18,9 +18,9 @@ private:
 	string m_name;
 	string m_balance;
 	bool m_in_jail;
-	int m_slot_inx;
+	int m_slot_num;
 	Board* m_board;
-	int *asset_arr;
+	Asset *asset_arr;
 	int m_asset_arr_size;
 
 public:
@@ -31,9 +31,20 @@ public:
 	//Copy Constructor
 	Player(const Player& PP);
 
-	int draw_dice();
 	int get_counter();
 	string get_name();
+
 	friend ostream& operator<<(ostream& os, const Player& P);
+
+	bool pay_rent(int amount);
+	bool add_asset(Asset* a);
+	void set_balance(int balance);
+	bool draw_dice();
+
+	// Asset stack
+	void pop();
+	void push(Asset& assest);
+	int get_asset_arr_size();
+
 
 };
