@@ -54,20 +54,24 @@ int Asset::get_rent() const
 {
 	return m_rent;
 }
-
+void Asset::set_owner(int player_num)
+{
+	m_owner = player_num;
+}
 
 bool Asset::play(Player* p)
 {
 	if (get_owner() == -1)
 	{
 		cout << "Do you want to buy " << m_asset_name << " in "
-			<< m_city << "for " << m_cost << " ?";
+			<< m_city << "for " << m_cost << " ? (1) To buy, (any key) Continue without buying." << endl;
 
-		// action 1
 		int in;
 		cin >> in;
-		if(in == 1)
+		if (in == 1)
+		{
 			p->add_asset(this);
+		}
 
 		return true;
 	}

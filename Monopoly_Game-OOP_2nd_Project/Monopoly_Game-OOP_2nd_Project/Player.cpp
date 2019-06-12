@@ -37,7 +37,7 @@ void Player::print_player_name() const
 	cout << endl<< m_name << "Balance: " << m_balance << endl << "Assets: ";
 	for (int i = 0; i < m_asset_arr_size; i++)
 	{
-		cout << asset_arr[i].get_city() << ", " << asset_arr[i].get_asset_name() << "|";
+		cout << asset_arr[i].get_city() << ", " << asset_arr[i].get_asset_name() << " | ";
 	}
 	cout << endl;
 }
@@ -101,7 +101,7 @@ bool Player::pay_rent(int amount)
 		}
 	}
 
-	set_balance(amount);
+	set_balance(-amount);
 	return true;
 }
 
@@ -111,6 +111,7 @@ bool Player::add_asset(Asset* a)
 		return false;
 	else
 	{
+		a->set_owner(m_player_num);
 		push(a);
 		return true;
 	}
@@ -119,13 +120,14 @@ bool Player::add_asset(Asset* a)
 void Player::pop() 
 {
 	m_balance += asset_arr[0].get_cost();
+	asset_arr[0].set_owner(-1);
 	Asset *temp = new Asset[m_asset_arr_size - 1];
 	for (int i = 0; i < m_asset_arr_size-1; i++)
 		temp[i] = asset_arr[i + 1];
 	
 	delete[] asset_arr;
 	asset_arr = temp;
-	m_asset_arr_size -= 1;
+	m_asset_arr_size--;
 }
 
 void Player::push(Asset* asset)
@@ -139,7 +141,7 @@ void Player::push(Asset* asset)
 
 	delete[] asset_arr;
 	asset_arr = temp;
-	m_asset_arr_size += 1;
+	m_asset_arr_size++;
 }
 
 
@@ -151,7 +153,7 @@ bool Player::draw_dice()
 		m_in_jail = false;
 		return true;
 	}
-	int dice = random_number(1, 6);
+	int dice = 2; //random_number(1, 6);
 	cout << "You move " << dice << " steps" << endl;
 	m_slot_num = ((m_slot_num + dice) % 18) - 1;
 	if (m_slot_num / 18)

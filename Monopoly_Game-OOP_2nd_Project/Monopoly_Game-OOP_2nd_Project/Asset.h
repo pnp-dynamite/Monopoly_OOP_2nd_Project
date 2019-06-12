@@ -35,10 +35,10 @@ public:
 	int get_owner() const;
 	int get_cost() const;
 	int get_rent() const;
-
+	void set_owner(int player_num);
 
 	bool play(Player* p);
-	friend ostream& operator<<(ostream& os, const Asset& P);
+	//friend ostream& operator<<(ostream& os, const Asset& P);
 
 };
 
