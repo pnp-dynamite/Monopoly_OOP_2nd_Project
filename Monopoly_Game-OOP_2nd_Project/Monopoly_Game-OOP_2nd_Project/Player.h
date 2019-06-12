@@ -1,7 +1,7 @@
 //#pragma once
 
 
-#include "Board.h"
+//#include "Board.h"
 #include "Asset.h"
 #include "Slot.h"
 #include <string>
@@ -17,8 +17,9 @@ using namespace std;
 #endif // _DEBUG
 
 class Board;
-class Asset;
 class Slot;
+class Asset;
+
 class Player
 {
 protected:

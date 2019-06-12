@@ -1,6 +1,6 @@
 //#pragma once
 using namespace std;
-class Player;
+
 
 #include <string>
 #include <time.h>
@@ -16,6 +16,7 @@ class Player;
 #endif
 #endif // _DEBUG
 
+class Player;
 class Slot
 {
 

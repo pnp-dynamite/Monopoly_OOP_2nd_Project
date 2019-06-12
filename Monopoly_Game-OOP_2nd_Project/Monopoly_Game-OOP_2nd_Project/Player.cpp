@@ -1,13 +1,14 @@
 //#pragma once
 
 #include "Player.h"
+//#include "Board.h"
 
 #define GoMoney 350
 
 using namespace std;
 
-int Player::player_counter = 1;
-
+//int Player::player_counter = 1;
+//class Board;
 
 Player::Player(const string name, Board* BB, int balance) : m_player_num(player_counter++)
 {

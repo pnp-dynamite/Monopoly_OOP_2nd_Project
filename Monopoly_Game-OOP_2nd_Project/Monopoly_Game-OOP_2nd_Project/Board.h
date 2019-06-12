@@ -1,15 +1,17 @@
-//#pragma once
-//#ifndef BOARD_H
-//#define BOARD_H
 
-//#include "Player.h"
+#ifndef BOARD_H
+
+#define BOARD_H
+
+#include "Player.h"
 #include "Asset.h"
 #include "Chance.h"
 #include "Go.h"
 #include "Jail.h"
+#include "Slot.h"
 
-class Slot;
-class Player;
+//class Slot;
+//class Player;
 
 
 #include <string>
@@ -51,3 +53,4 @@ public:
 };
 
 
+#endif BOARD_H

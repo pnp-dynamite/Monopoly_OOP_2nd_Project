@@ -15,8 +15,8 @@ using namespace std;
 #define new DBG_NEW
 #endif
 #endif // _DEBUG
-class Player;
-class Slot;
+//class Player;
+//class Slot;
 class Go : public Slot
 {
 protected:

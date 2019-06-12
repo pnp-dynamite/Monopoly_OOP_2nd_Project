@@ -4,8 +4,7 @@
 #include <string>
 #include <iostream>
 #include "Slot.h"
-#include "Player.h"
-
+//#include "Player.h"
 
 using namespace std;
 
@@ -17,7 +16,7 @@ using namespace std;
 #endif // _DEBUG
 
 class Player;
-class Slot;
+//class Slot;
 class Asset	: public Slot
 {
 protected:

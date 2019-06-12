@@ -18,8 +18,8 @@ using namespace std;
 #endif
 #endif // _DEBUG
 
-class Player;
-class Slot;
+//class Player;
+//class Slot;
 class Jail : public Slot
 {
 protected:
