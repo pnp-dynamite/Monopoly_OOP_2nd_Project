@@ -1,13 +1,7 @@
-//#pragma once
-
-
-//#include "Board.h"
-#include "Asset.h"
-#include "Slot.h"
-#include <string>
-
-
+#pragma once
 using namespace std;
+
+#include <string>
 
 #ifdef _DEBUG
 #ifndef DBG_NEW
@@ -16,10 +10,9 @@ using namespace std;
 #endif
 #endif // _DEBUG
 
-class Board;
 class Slot;
+class Board;
 class Asset;
-
 class Player
 {
 protected:
@@ -29,11 +22,13 @@ protected:
 	int m_balance;
 	bool m_in_jail;
 	int m_slot_num; //index on board
-	Board* m_board;
+											//Board* m_board; // in public TBD
 	Asset* asset_arr;
 	int m_asset_arr_size;
 
 public:
+	Board* m_board;
+
 	// Constructor
 	Player(const string name, Board* BB, int balance);
 	//	Destructor 
@@ -56,7 +51,7 @@ public:
 	int get_asset_arr_size()const;
 	int get_player_num()const;
 	int get_balance()const;
-	int get_counter()const;
+	static int get_counter();
 	string get_name()const;
 
 	void set_in_jail();

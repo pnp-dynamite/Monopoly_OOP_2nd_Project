@@ -1,7 +1,9 @@
-//#pragma once
+#pragma once
 
 #include "Player.h"
-//#include "Board.h"
+#include "Board.h"
+#include "Slot.h"
+#include "Asset.h"
 
 #define GoMoney 350
 
@@ -38,7 +40,7 @@ int Player::get_player_num()const
 	return m_player_num;
 }
 
-int Player::get_counter()const
+int Player::get_counter()
 {
 	return player_counter;
 }
@@ -136,7 +138,7 @@ bool Player::draw_dice()
 		set_balance(GoMoney);
 	}
 	
-	return m_board->get_slot(m_slot_num)->play();
+	return m_board->get_slot(m_slot_num)->play(this);
 }
 
 

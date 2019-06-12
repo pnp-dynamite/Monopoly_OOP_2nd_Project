@@ -1,6 +1,7 @@
-//#pragma once
+#pragma once
 #include "Board.h"
 #include "Player.h"
+#include "Slot.h"
 
 #include <string>
 #include <iostream>
@@ -12,8 +13,8 @@ int main()
 
 	Board monopoly;	
 	cout << monopoly;
-	Player players[2] = { Player("Neta",monopoly, 350),Player("Yael",monopoly, 350) };
-	monopoly.play(players);
+	//Player players[2] = { Player("Neta",monopoly, 350),Player("Yael",monopoly, 350) };
+	//monopoly.play(players);
 	return 0;
 
 }

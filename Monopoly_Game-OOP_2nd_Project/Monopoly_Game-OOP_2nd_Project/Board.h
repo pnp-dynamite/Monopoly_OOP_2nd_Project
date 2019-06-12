@@ -1,18 +1,5 @@
-
-#ifndef BOARD_H
-
-#define BOARD_H
-
-#include "Player.h"
-#include "Asset.h"
-#include "Chance.h"
-#include "Go.h"
-#include "Jail.h"
-#include "Slot.h"
-
-//class Slot;
-//class Player;
-
+#pragma once
+using namespace std;
 
 #include <string>
 #include <time.h>
@@ -20,10 +7,8 @@
 #include <iostream>
 #include <iomanip>
 
-
-using namespace std;
-
-
+class Slot;
+class Player;
 class Board {
 public:
 	enum action { END_GAME, PLAY, PRINT_BOARD };
@@ -53,4 +38,4 @@ public:
 };
 
 
-#endif BOARD_H
+//#endif BOARD_H

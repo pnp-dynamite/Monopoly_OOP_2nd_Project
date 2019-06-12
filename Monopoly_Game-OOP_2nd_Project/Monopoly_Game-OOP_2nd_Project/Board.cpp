@@ -1,8 +1,11 @@
-//#pragma once
+#pragma once
 
 #include "Board.h"
-#include "Player.h"
-
+#include "Slot.h"
+#include "Asset.h"
+#include "Jail.h"
+#include "Go.h"
+#include "Chance.h"
 
 using namespace std;
 

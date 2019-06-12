@@ -1,12 +1,8 @@
-//#pragma once
+#pragma once
+using namespace std;
 
-
-#include <string>
-#include <iostream>
 #include "Slot.h"
 //#include "Player.h"
-
-using namespace std;
 
 #ifdef _DEBUG
 #ifndef DBG_NEW
@@ -16,7 +12,6 @@ using namespace std;
 #endif // _DEBUG
 
 class Player;
-//class Slot;
 class Asset	: public Slot
 {
 protected:

@@ -1,7 +1,6 @@
-//#pragma once
+#pragma once
 
 #include "Asset.h"
-//#include "Player.h"
 
 using namespace std;
 
@@ -65,7 +64,7 @@ bool Asset::play(Player* p)
 			<< m_city << "for " << m_cost << " ?";
 
 		// action 1
-		p->add_asset(this);
+		//p->add_asset(this);
 
 		// actio ANY OTHER KEY
 		return true;

@@ -1,6 +1,7 @@
-//#pragma once
+#pragma once
 using namespace std;
 
+#include "Player.h"
 
 #include <string>
 #include <time.h>
