@@ -29,8 +29,8 @@ string Chance::get_name() const
 
 bool Chance::play(Player* p)
 {
-	m_amount > 0 ? cout << "You Won the LOTTORY": cout << "You Have to pay the IRS ";
-	cout << m_amount << "$ !";
+	m_amount > 0 ? cout << "You Won the LOTTORY ": cout << "You Have to pay the IRS ";
+	cout << m_amount << "$!" << endl;
 
 	p->set_balance(m_amount);
 

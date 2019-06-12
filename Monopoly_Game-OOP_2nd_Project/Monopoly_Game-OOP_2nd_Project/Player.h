@@ -16,7 +16,6 @@ class Asset;
 class Player
 {
 protected:
-	static int player_counter;
 	int m_player_num;
 	string m_name;
 	int m_balance;
@@ -27,17 +26,20 @@ protected:
 	int m_asset_arr_size;
 
 public:
+	static int player_counter;
 	Board* m_board;
 
 	// Constructor
-	Player(const string name, Board* BB, int balance);
+	Player(string name, Board& BB, int balance);
+
+	//Player(string name = " ", Board* BB = nullptr, int balance = 1);
 	//	Destructor 
 	~Player();
 	//Copy Constructor
 	Player(const Player& PP);
 
 
-
+	void print_player_name() const;
 	friend ostream& operator<<(ostream& os, const Player& P);
 
 	bool pay_rent(int amount);
@@ -51,7 +53,9 @@ public:
 	int get_asset_arr_size()const;
 	int get_player_num()const;
 	int get_balance()const;
-	static int get_counter();
+
+	static int Player::get_counter();
+
 	string get_name()const;
 
 	void set_in_jail();

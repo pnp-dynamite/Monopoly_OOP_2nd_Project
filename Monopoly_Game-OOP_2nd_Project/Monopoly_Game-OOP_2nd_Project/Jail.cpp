@@ -26,7 +26,7 @@ string Jail::get_name() const
 
 bool Jail::play(Player* p)
 {
-	cout << m_order << endl;
+	cout  << m_order << endl;
 	p->set_in_jail();
 
 	return true;

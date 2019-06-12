@@ -136,8 +136,8 @@ void Board::increase_board()
 	for (i = 0; i < m_size; i++)
 		tmp[i] = m_arr[i];
 	m_size++;
-	if (m_arr)
-		delete[] m_arr;
+	//if (m_arr)
+	//	delete[] m_arr;
 	m_arr = tmp;
 }
 
@@ -224,7 +224,10 @@ void Board::play(Player* players)
 		else if (a == PLAY)
 		{
 			if (!(players[player]).draw_dice())
+			{
+				cout << "GAME OVER!!!!";
 				break;
+			}
 			cout << players[player];
 			player = (player + 1) % Player::get_counter();
 		}

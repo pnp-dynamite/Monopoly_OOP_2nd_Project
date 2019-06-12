@@ -9,13 +9,12 @@
 
 using namespace std;
 
-//int Player::player_counter = 1;
-//class Board;
+int Player::player_counter = 0;
 
-Player::Player(const string name, Board* BB, int balance) : m_player_num(player_counter++)
+Player::Player(string name, Board& BB, int balance) : m_player_num(++player_counter), m_name(name)
 {
-	m_name = name;
-	m_board = BB; // μαγεχ φιξεγ
+	//m_name = name;
+	m_board = &BB; // μαγεχ φιξεγ
 	m_balance = balance;
 	m_in_jail = false;
 	m_slot_num = 1;
@@ -33,9 +32,24 @@ Player::Player(const Player& PP)
 {
 }
 
+void Player::print_player_name() const
+{
+	cout << endl<< m_name << "Balance: " << m_balance << endl << "Assets: ";
+	for (int i = 0; i < m_asset_arr_size; i++)
+	{
+		cout << asset_arr[i].get_city() << ", " << asset_arr[i].get_asset_name() << "|";
+	}
+	cout << endl;
+}
 
 
-int Player::get_player_num()const
+ ostream& operator<<(ostream& os, const Player& P)
+{
+	 P.print_player_name();
+	 return os;
+}
+
+int Player::get_player_num() const
 {
 	return m_player_num;
 }
@@ -71,12 +85,20 @@ void Player::set_balance(int balance)
 
 bool Player::pay_rent(int amount)
 {
+	cout << "You steped of owned asset!, You have to pay: " << amount << "$ " << endl;
 	while (amount > m_balance)
 	{
+		cout << "You don't have enough money! " << endl;
 		if (m_asset_arr_size == 0)
+		{
+			cout << "You dont have any assets, GAME OVER!" << endl;
 			return false;
+		}
 		else
+		{
+			cout << "Your last asset has been sold! " << endl;
 			pop();
+		}
 	}
 
 	set_balance(amount);
@@ -130,9 +152,9 @@ bool Player::draw_dice()
 		return true;
 	}
 	int dice = random_number(1, 6);
-
+	cout << "You move " << dice << " steps" << endl;
 	m_slot_num = ((m_slot_num + dice) % 18) - 1;
-	if ((m_slot_num + dice) / 18)
+	if (m_slot_num / 18)
 	{
 		cout << "Bon Voyage" << endl;
 		set_balance(GoMoney);

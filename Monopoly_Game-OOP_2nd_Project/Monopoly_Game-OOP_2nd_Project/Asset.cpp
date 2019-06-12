@@ -8,7 +8,7 @@ Asset::Asset(int size, string city, string asset_name): Slot(size)
 {
 	m_city = city;
 	m_asset_name = asset_name;
-	m_owner = 0;
+	m_owner = -1;
 
 	m_rent = random_number(5, 50);
 	m_cost = random_number(50, 150);
@@ -64,12 +64,12 @@ bool Asset::play(Player* p)
 			<< m_city << "for " << m_cost << " ?";
 
 		// action 1
-		//p->add_asset(this);
+		int in;
+		cin >> in;
+		if(in == 1)
+			p->add_asset(this);
 
-		// actio ANY OTHER KEY
 		return true;
-
-
 	}
 	else if (get_owner() != p->get_player_num())
 	{
