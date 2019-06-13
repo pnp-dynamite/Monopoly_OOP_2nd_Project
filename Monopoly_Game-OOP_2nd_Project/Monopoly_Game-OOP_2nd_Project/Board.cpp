@@ -2,10 +2,7 @@
 
 #include "Board.h"
 #include "Slot.h"
-#include "Asset.h"
-#include "Jail.h"
-#include "Go.h"
-#include "Chance.h"
+
 
 using namespace std;
 
@@ -47,11 +44,11 @@ void draw_inner_line(int width, const string* line, bool last)
 
 
 ostream& operator<<(ostream& os, const Board& b)
-{	
-	draw_edge_line(b.m_slot_width, b.m_board_image[0]);	
+{
+	draw_edge_line(b.m_slot_width, b.m_board_image[0]);
 	for (int row = 1; row < 5; row++)
 		draw_inner_line(b.m_slot_width, b.m_board_image[row], row == 4);
-	draw_edge_line(b.m_slot_width, b.m_board_image[5]);	
+	draw_edge_line(b.m_slot_width, b.m_board_image[5]);
 	return os;
 }
 
@@ -98,10 +95,10 @@ void Board::init_board_image()
 	m_slot_width += 2;
 }
 
-Board::Board()
+Board::Board() :m_arr(nullptr)
 {
-	srand(time(NULL));
-	m_size = 0;	
+	srand(time_t(NULL));
+	m_size = 0;
 	add_go_slot("GO!");
 	add_asset_slot("Jerusalem", "zoo");
 	add_asset_slot("Jerusalem", "David_tower");
@@ -109,11 +106,11 @@ Board::Board()
 	add_jail_slot("JAIL! Wait 1 turn");
 
 	add_asset_slot("Tel_Aviv", "Hilton");
-	int num = rand() % 1000 + 500;
+	int num = rand() % 500;
 	add_chance_slot("You won the lottery", num);
 	add_asset_slot("Tel_Aviv", "Azrieli");
 	add_asset_slot("Tel_Aviv", "Habima");
-	num = rand() % 200 + 100;
+	num = rand() % 200;
 	add_chance_slot("You have to pay the IRS", -num);
 
 	add_asset_slot("Carmiel", "Rocks_park");
@@ -129,6 +126,13 @@ Board::Board()
 	init_board_image();
 }
 
+Board::~Board()
+{
+	for (int i = 0; i < m_size; i++)
+		delete m_arr[i];
+	delete[] m_arr;
+}
+
 void Board::increase_board()
 {
 	Slot ** tmp = new Slot *[m_size + 1];
@@ -136,19 +140,18 @@ void Board::increase_board()
 	for (i = 0; i < m_size; i++)
 		tmp[i] = m_arr[i];
 	m_size++;
-	//if (m_arr)
-	//	delete[] m_arr;
+	delete[] m_arr;
 	m_arr = tmp;
 }
 
 void Board::add_asset_slot(const string& city, const string& asset_name)
 {
 	increase_board();
-	m_arr[m_size-1] = new Asset(m_size, city, asset_name);
+	m_arr[m_size - 1] = new Asset(m_size, city, asset_name);
 }
 
 
-void Board::add_go_slot(const string& text) 
+void Board::add_go_slot(const string& text)
 {
 	increase_board();
 	m_arr[m_size - 1] = new Go(m_size, text);
@@ -160,7 +163,7 @@ void Board::add_jail_slot(const string& text)
 	m_arr[m_size - 1] = new Jail(m_size, text);
 }
 
-void Board::add_chance_slot(const string& text, float amount)
+void Board::add_chance_slot(const string& text, int amount)
 {
 	increase_board();
 	m_arr[m_size - 1] = new Chance(m_size, text, amount);
@@ -200,7 +203,7 @@ Board::action Board::get_command() const
 		cin.clear();
 		cin.ignore();
 		return get_command();
-	}	
+	}
 	return cmd;
 }
 
@@ -210,9 +213,9 @@ void Board::play(Player* players)
 	action a;
 	while (1)
 	{
-		cout << players[player].get_name() << "'s turn: ";
-		print_help();					
-		a = (action)get_command();		
+		cout << endl << players[player].get_name() << "'s turn: ";
+		print_help();
+		a = (action)get_command();
 
 		if (a == END_GAME)
 			break;
@@ -225,7 +228,7 @@ void Board::play(Player* players)
 		{
 			if (!(players[player]).draw_dice())
 			{
-				cout << "GAME OVER!!!!";
+				cout << "GAME OVER!!!!" << endl;
 				break;
 			}
 			cout << players[player];

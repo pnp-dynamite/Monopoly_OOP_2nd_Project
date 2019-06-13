@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Last Classes">
+      <UniqueIdentifier>{c50dfcde-a8db-435f-b9e3-b50606705ba1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -24,20 +27,20 @@
     <ClCompile Include="Slot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Asset.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Go.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Chance.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Asset.cpp">
+      <Filter>Last Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Chance.cpp">
+      <Filter>Last Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Go.cpp">
+      <Filter>Last Classes</Filter>
+    </ClCompile>
     <ClCompile Include="Jail.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Last Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,20 +50,20 @@
     <ClInclude Include="Slot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Asset.h">
+    <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Go.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Jail.h">
-      <Filter>Header Files</Filter>
+      <Filter>Last Classes</Filter>
     </ClInclude>
     <ClInclude Include="Chance.h">
-      <Filter>Header Files</Filter>
+      <Filter>Last Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Asset.h">
+      <Filter>Last Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Jail.h">
+      <Filter>Last Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
